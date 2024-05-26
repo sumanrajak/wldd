@@ -66,8 +66,16 @@
   padding: 1px 4px;
   border-radius: 2px;
 }
+.navitems{
+  width: 17%;
+}
 @media only screen and (max-width: 600px) {
-
+  .navitems{
+    width: auto;
+  }
+  .email-container{
+padding: 0;
+  }
   .menu{
     display: none;
   }
@@ -83,6 +91,7 @@
     display: none;
 
   }
+
   /* .inbox{
     display: none;
 
