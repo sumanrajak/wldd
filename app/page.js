@@ -136,9 +136,9 @@ export default function Home() {
       <Nav appearance="subtle" activeKey={active} onSelect={setActive} style={{  border: "black" }}>
       <Nav.Item eventKey="All" className="navitems" >All</Nav.Item>
 
-      <Nav.Item eventKey="Primary" >  <EmailIcon  style={{marginRight:"10px"}}/>Primary</Nav.Item>
-      <Nav.Item eventKey="Promotion" > <TagIcon  style={{marginRight:"10px"}}/>Promotion</Nav.Item>
-      <Nav.Item eventKey="Social" > < PeoplesIcon style={{marginRight:"10px"}}/> Social</Nav.Item>
+      <Nav.Item eventKey="Primary" className="navitems" >  <EmailIcon  style={{marginRight:"10px"}}/>Primary</Nav.Item>
+      <Nav.Item eventKey="Promotion" className="navitems" > <TagIcon  style={{marginRight:"10px"}}/>Promotion</Nav.Item>
+      <Nav.Item eventKey="Social" className="navitems" > < PeoplesIcon style={{marginRight:"10px"}}/> Social</Nav.Item>
     
     </Nav>
       {
