@@ -5,6 +5,7 @@ import EmailModal from './Email';
 
 const EmailTabs = ({ data }) => {
     const [open, setOpen] = useState(false);
+    const [isSelected, setisSelected] = useState(false)
 
     const handleOpen = () => {
         setOpen(true);
@@ -22,11 +23,15 @@ const EmailTabs = ({ data }) => {
         }
     }
     const handleClose = () => setOpen(false);
+    const handleChange = (value,checked) => {
+        setisSelected(checked)};
+
+
     return (
-        <div className='emailtab' >
+        <div className='emailtab' style={{backgroundColor:isSelected?"#C2DBFF":""}}>
             {/* <div style={{ display: "flex", gap: "10px" }} > */}
                 <div className='checkbox'>
-                    <Checkbox><strong>{data.senderName}</strong></Checkbox>
+                    <Checkbox value={data.senderName} onChange={handleChange}><strong>{data.senderName}</strong></Checkbox>
                 </div>
                 <div  className="midTsb" onClick={handleOpen}>
                     <div className='inbox' style={{backgroundColor:setColor()}}>{data.type?data.type:"Inbox"}</div>

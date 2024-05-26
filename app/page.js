@@ -134,17 +134,16 @@ export default function Home() {
   return (
     <div className="email-container">
       <Nav appearance="subtle" activeKey={active} onSelect={setActive} style={{  border: "black" }}>
-      <Nav.Item eventKey="All">All</Nav.Item>
+      <Nav.Item eventKey="All" style={{width:"17%"}}>All</Nav.Item>
 
-      <Nav.Item eventKey="Primary">  <EmailIcon  style={{marginRight:"10px"}}/>Primary</Nav.Item>
-      <Nav.Item eventKey="Promotion"> <TagIcon  style={{marginRight:"10px"}}/>Promotion</Nav.Item>
-      <Nav.Item eventKey="Social"> < PeoplesIcon style={{marginRight:"10px"}}/> Social</Nav.Item>
+      <Nav.Item eventKey="Primary" style={{width:"17%"}}>  <EmailIcon  style={{marginRight:"10px"}}/>Primary</Nav.Item>
+      <Nav.Item eventKey="Promotion" style={{width:"17%"}}> <TagIcon  style={{marginRight:"10px"}}/>Promotion</Nav.Item>
+      <Nav.Item eventKey="Social" style={{width:"17%"}}> < PeoplesIcon style={{marginRight:"10px"}}/> Social</Nav.Item>
     
     </Nav>
       {
         email.map((e,i)=>{
           if(active=="All")return <EmailTabs data={e} key={i}/>
-
           if(e.type==active)return <EmailTabs data={e} key={i}/>
         })
         
@@ -152,7 +151,6 @@ export default function Home() {
       {
             email.map((e,i)=>{
               if(active=="All")return <EmailTabs data={e} key={i}/>
-
               if(e.type==active) return <EmailTabs data={e} key={i+"r"}/>
         })
       }
