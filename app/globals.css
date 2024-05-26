@@ -52,6 +52,20 @@
 .menu{
   cursor: pointer;
 }
+.checkbox{
+  width: 20%;
+}
+.midTsb{
+  width: 70%;
+  display: flex;
+  gap: 4px;
+
+}
+.inbox{
+  background-color: azure;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
 @media only screen and (max-width: 600px) {
 
   .menu{
