@@ -1,33 +1,72 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+}
+.app{
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+}
+.navBar{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #F7F7FA;
+}
+.email-container{
+  overflow-y: scroll;
+  padding: 10px;
+  width: 100%;
+}
+.emailtab{
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.content{
+    white-space: nowrap; 
+    width: 50vw; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+ 
+}
+.emailtab:hover{
+  box-shadow: 10px;
+  border: 2px solid #F7F7FA;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.compose{
+  width: 90%;
+  padding: 20px 10px;
+  background-color: #C1E7FE;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+}
+.menu{
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+
+  .menu{
+    display: none;
   }
-}
+  
+  .search{
+    display: none;
+  }
+  .sidenav{
+    display: none;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  }
+  .content{
+    display: none;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }
