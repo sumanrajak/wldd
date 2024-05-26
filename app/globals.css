@@ -83,4 +83,12 @@
     display: none;
 
   }
+  /* .inbox{
+    display: none;
+
+  } */
+  .checkbox{
+    width: 40%;
+    /* white-space: nowrap; */
+  }
 }

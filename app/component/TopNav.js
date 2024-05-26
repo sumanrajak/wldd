@@ -28,7 +28,7 @@ const TopNav = ({ handelEcpand }) => {
                 <InputGroup.Button>
                         <SearchIcon />
                     </InputGroup.Button>
-                    <Input />
+                    <Input  placeholder='Search Mail '/>
                     
                 </InputGroup>
             </div>
